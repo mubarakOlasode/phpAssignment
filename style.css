@@ -8,11 +8,32 @@ body {
 }
 .container {
   height: max-content;
-  width: 50vh;
+  width: max-content;
   border: 2px solid transparent;
   border-radius: 15px 15px;
   text-align: center;
   background-color: rgba(154, 205, 50, 0.6);
+  padding: 40px 40px;
+}
+.data_view {
+  display: flex;
+  margin-left: 250px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.fname,
+.lname,
+.email,
+.password {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+label {
+  flex: 1;
 }
 h1 {
   font-size: 1.5em;
@@ -28,11 +49,10 @@ label {
   opacity: 0.8;
 }
 input {
-  margin-top: 40px;
+  flex: 1;
   padding: 5px 50px;
   border-radius: 5px;
   border: 0.5px solid;
-  /* border:transparent; */
 }
 .btn {
   padding: 2px 100px;
@@ -42,12 +62,4 @@ input {
   background-color: green;
   color: white;
   border: transparent;
-}
-#fname,
-#lname,
-#password {
-  margin-left: 30px;
-}
-#email {
-  margin-left: 40px;
 }
