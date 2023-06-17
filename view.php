@@ -12,6 +12,12 @@ $res = $database->read();
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
+  <header>
+        <?php
+      include("./global_header.php")
+  
+      ?>
+      </header>
   <div class="container"> 
     <table class="table">
   <thead>
@@ -20,11 +26,14 @@ $res = $database->read();
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">Zip</th>
     </tr>
   </thead>
   <tbody>
     <?php
-     $count=1;
+     $count=0;
      while($r=mysqli_fetch_assoc($res)){
        $count++;
         ?>
@@ -33,6 +42,10 @@ $res = $database->read();
       <td><?php echo $r['fname']?></td>
       <td><?php echo $r['lname']?></td>
       <td><?php echo $r['email']?></td>
+      <td><?php echo $r['address']?></td>
+      <td><?php echo $r['city']?></td>
+      <td><?php echo $r['zip']?></td>
+
     </tr>
   </tbody>
 <?php
@@ -40,5 +53,5 @@ $res = $database->read();
     ?> 
 </table>
   </div>
-  </body>
-</html> 
+  </body>
+</html>

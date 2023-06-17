@@ -1,7 +1,8 @@
 <?php
 class Db_connection{
     private $connection;
-    function db_connection(){
+    function __construct()
+    {
         $this->db_connect();
     }
     public function db_connect(){
@@ -10,8 +11,8 @@ class Db_connection{
         die("this connection is not established".mysqli_connect_error().mysqli_connect_error());
        };
     }
-    function create($fname,$lname,$email){
-        $db_sql= "INSERT INTO Student (fname,lname,email) VALUES ($fname,$lname,$email)";
+    function create($fname,$lname,$email,$address,$city,$zip){
+        $db_sql= "INSERT INTO Student (fname,lname,email,address,city,zip) VALUES ('$fname','$lname','$email','$address','$city','$zip')";
         $res = mysqli_query($this->connection,$db_sql);
         if($res){
             return "Entry created";

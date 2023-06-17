@@ -1,65 +1,21 @@
 @charset "utf-8";
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background-color: rgba(124, 252, 0, 0.1);
-}
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Karla:wght@200&family=Nunito+Sans:wght@200&family=Oswald&family=Rubik+Puddles&family=Yuji+Hentaigana+Akari&display=swap");
 .container {
-  height: max-content;
-  width: max-content;
-  border: 2px solid transparent;
-  border-radius: 15px 15px;
-  text-align: center;
-  background-color: rgba(154, 205, 50, 0.6);
-  padding: 40px 40px;
+  margin-top: 100px;
 }
-.data_view {
-  display: flex;
-  margin-left: 250px;
+.logo {
+  font-family: "Kablammo", cursive;
 }
-form {
-  display: flex;
-  flex-direction: column;
-}
-.fname,
-.lname,
-.email,
-.password {
+.header {
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
-  margin-left: 40px;
 }
-label {
-  flex: 1;
-}
-h1 {
-  font-size: 1.5em;
-  color: white;
-}
-a {
-  margin-left: 5px;
-  text-decoration: underline;
-  color: white;
-}
-label {
-  font-size: 1.3em;
-  opacity: 0.8;
-}
-input {
-  flex: 1;
-  padding: 5px 50px;
-  border-radius: 5px;
-  border: 0.5px solid;
-}
-.btn {
-  padding: 2px 100px;
-  border-radius: 5px;
-  font-size: 1em;
-  margin-top: 30px;
-  background-color: green;
-  color: white;
-  border: transparent;
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: cornflowerblue;
+  padding: 30px 30px;
+  font-family: "Dancing Script", cursive;
 }
